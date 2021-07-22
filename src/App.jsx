@@ -1,3 +1,6 @@
+// styles
+import './styles/global.module.scss'
+
 export default function App() {
   return (
     <div>
