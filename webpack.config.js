@@ -17,8 +17,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin( { template: path.resolve( __dirname, 'public', 'index.html' ) } ),
-    isDevelopment && new ReactRefresherWebpackPlugin()
-  ].filter( Boolean ),
+    // isDevelopment && new ReactRefresherWebpackPlugin()
+  ],
   devServer: {
     contentBase: path.resolve( __dirname, 'public' ),
   },
@@ -29,11 +29,11 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: {
-            plugins: [
-              isDevelopment && require.resolve( 'react-refresh/babel' )
-            ].filter( Boolean ),
-          }
+          // options: {
+          //   plugins: [
+          //     isDevelopment && require.resolve( 'react-refresh/babel' )
+          //   ].filter( Boolean ),
+          // }
         },
       },
       {

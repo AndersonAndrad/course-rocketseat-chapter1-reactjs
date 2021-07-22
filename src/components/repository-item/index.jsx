@@ -1,10 +1,14 @@
-export default function RepositoryItem(props){
-  return(
-    <div>
+// styles
+import './styles.scss'
+
+export default function RepositoryItem ( props ) {
+  return (
+    <>
       <li>
-          <strong>{props.name}</strong>
-          <p>Forms in react</p>
-        </li>
-    </div>
+        <strong>{props.repository.name}</strong>
+        <p>{props.repository.description}</p>
+        <a href={props.repository.html_url}>{props.repository.html_url}</a>
+      </li>
+    </>
   )
 }
